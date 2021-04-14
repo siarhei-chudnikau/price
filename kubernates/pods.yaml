@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: price-pod
+spec:
+  containers:
+    - name: price-container
+      image: chudnikau/k8s:latest
