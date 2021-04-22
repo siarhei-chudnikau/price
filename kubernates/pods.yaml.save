@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: price-pod
-  labels:
-    env: prod
-    app: main
-    tier: price
-    owner: SiarheiChudnikau
 spec:
+  ports:
+  - port: 7788
+    targetPort: 8080
+    protocol: TCP
+    name: price
   containers:
   - name: price-container
     image: chudnikau/k8s:latest
