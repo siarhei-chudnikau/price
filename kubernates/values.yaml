@@ -1,0 +1,4 @@
+#Default values for Chart
+
+containter:
+  image: chudnikau/k8s:latest 

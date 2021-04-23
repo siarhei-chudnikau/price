@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ .Values.environment }}-price-pod
+  labels:
+    env: {{ .Values.environment }}
+    app: main
+    tier: price
+    owner: SiarheiChudnikau
+spec:
+  containers:
+  - name: {{ .Values.environment }}-price-container
+    image: {{ .Values.containter.image }}
+    ports:
+    - containerPort: 8080

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-servers
+  labels:
+    env: prod
+    app: main
+    owner: SiarheiChudnikau
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    ports:
+    - containerPort: 8081
+
+  - name: tomcat-container
+    image: tomcat:8.5.38
+    ports:
+    - containerPort: 8082
+
+
